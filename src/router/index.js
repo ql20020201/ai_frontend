@@ -77,6 +77,14 @@ const router =  new Router({
         title: 'student_homepage',
       }
     },
+    {
+      path:'/single_game_view',
+      name:'game_detail',
+      component: single_game_view => require(['@/pages/single_game_view.vue'], single_game_view),
+      meta:{
+        title: 'game_detail',
+      }
+    },
 		{
 			path: '*',
 			redirect:'/index',
