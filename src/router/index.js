@@ -69,6 +69,14 @@ const router =  new Router({
         title: '应用详情',
       }
     },
+    {
+      path:'/s_homepage',
+      name:'student_homepage',
+      component: s_homepage => require(['@/pages/s_homepage.vue'], s_homepage),
+      meta:{
+        title: 'student_homepage',
+      }
+    },
 		{
 			path: '*',
 			redirect:'/index',
