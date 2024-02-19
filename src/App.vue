@@ -1,9 +1,7 @@
 <template>
   <div id="app">
     <el-container style="height: 100%">
-      <el-aside style="width: 255px;">
-        <Nav/>
-      </el-aside>
+
       <el-container>
         <el-header>
           <NavTop/>
