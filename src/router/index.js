@@ -85,6 +85,14 @@ const router =  new Router({
         title: 'game_detail',
       }
     },
+    {
+      path:'/t_homepage',
+      name:'teacher_homepage',
+      component: t_homepage => require(['@/pages/t_homepage.vue'], t_homepage),
+      meta:{
+        title: 'teacher_homepage',
+      }
+    },
 		{
 			path: '*',
 			redirect:'/index',
