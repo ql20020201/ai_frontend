@@ -80,9 +80,10 @@
     padding: 10px;
     margin: 10px;
     border: 1px solid rgb(0, 0, 255);
+    height: 450px;
 }
 .box {
-    height: 50%;
+    height: 100%;
 }
 
 
