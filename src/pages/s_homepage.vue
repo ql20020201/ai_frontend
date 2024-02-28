@@ -1,112 +1,79 @@
 <template>
-    <el-container class="container">
-        
+    <el-container class="main-container">
+      <el-aside class="sidebar">
+        <el-menu>
+          <el-menu-item index="1" @click="scrollToSection('hot')">hot race</el-menu-item>
+          <el-menu-item index="2" @click="scrollToSection('new')">new race</el-menu-item>
+          <el-menu-item index="3" @click="scrollToSection('leaderboard')">leaderboard</el-menu-item>
+          <el-menu-item index="4" @click="scrollToSection('competitions')">competitions</el-menu-item>
+        </el-menu>
+      </el-aside>
+  
+      <el-container class="content-container">
+        <el-header class="header"></el-header>
         <el-main class="main">
-            
-            <div class="box">
-                <div class="box1">
-
-                    <el-button @click="click_button({
-                                            date: '2016-05-02',
-                                            name: '王小虎',
-                                            address: '上海市普陀区金沙江路 1518 弄'})">点击</el-button>
-                    <el-table class="data"
-                        :data="tableData">
-
-                        <el-table-column
-                            prop="date"
-                            label="日期"
-                            width="180">
-                        </el-table-column>
-                        <el-table-column
-                            prop="name"
-                            label="姓名"
-                            width="180">
-                        </el-table-column>
-                        <el-table-column
-                            prop="address"
-                            label="地址">
-                        </el-table-column>
-
-                    </el-table>
-                </div>
-                <div class="box2">2</div>
-            </div>
-
-            <div class="box">
-                <div class="box1">1</div>
-                <div class="box2">2</div>
-            </div>
-            <div class="box">
-                
-            </div>
+          <div id="hot" class="section hot">热门比赛排行榜</div>
+          <div id="new" class="section new">最新比赛排行榜</div>
+          <div id="leaderboard" class="section leaderboard">学员总分排行榜</div>
+          <div id="competitions" class="section competitions">所有比赛</div>
         </el-main>
+      </el-container>
     </el-container>
-</template>
+  </template>
   
-<script>
+  <script>
   export default {
-    name: "homepage",
-    data() {
-      return {
-        tableData: []
-      }
-    },
-    mounted() {
-      
-    },
     methods: {
-        click_button(d) {
-            this.tableData.push(
-                d
-            );
+      scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
         }
+      }
     }
-  }
-</script>
+  };
+  </script>
   
-<style scoped>
-
-.container {
-    border: 1px solid rgb(0, 255, 0);
+  <style scoped>
+  .main-container {
     height: 100%;
     width: 100%;
-}
-.header {
-    border: 1px solid rgb(255, 0, 0)
-}
+    border: 1px solid #eee;
+  }
+  
+  .sidebar {
+    background-color: rgb(238, 241, 246);
+    width: 200px;
+  }
 
-.main {
-    padding: 0px;
-    margin: 0px;
-    border: 1px solid rgb(0, 0, 255);
-}
-.box {
-    display: flex;
-    justify-content: center;
-    height: 50%;
-    border: 1px solid rgb(255, 0, 0);
-}
-
-.box1 {
-    width: 48%;
-    height: 95%;
-    border: 1px solid rgb(255, 0, 255);
-    overflow: scroll;
-    margin-right: 10px;
-    margin-top: 8px;
-}
-.box2 {
-    width: 48%;
-    height: 95%;
-    margin-left: 10px;
-    border: 1px solid rgb(255, 0, 255);
-    margin-top: 8px;
-}
-
-.data {
-    width: 100%;
-}
-
-</style>
+  .header {
+    height: 35%;
+    background-color: #B3C0D1;
+    color: #333;
+  }
+  
+  .section {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: calc(100% - 40px); /* Adjust width based on margin and padding */
+  }
+  
+  /* Specific height for each section */
+  .hot {
+    height: 150px; /* Example height */
+  }
+  
+  .new {
+    height: 200px; /* Different height for demonstration */
+  }
+  
+  .leaderboard {
+    height: 250px; /* Different height for demonstration */
+  }
+  
+  .competitions {
+    height: 300px; /* Different height for demonstration */
+  }
+  </style>
   
