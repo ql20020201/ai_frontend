@@ -62,4 +62,7 @@ export default {
     border-bottom: solid 1.5px rgba(140, 147, 157, 0.5);
   }
 
+  .el-main{
+    padding: 0px;
+  }
 </style>

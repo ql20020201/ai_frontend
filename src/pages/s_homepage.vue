@@ -1,6 +1,6 @@
 <template>
     <el-container class="container">
-        <el-header class="header">Header</el-header>
+        
         <el-main class="main">
             
             <div class="box">
@@ -37,7 +37,9 @@
                 <div class="box1">1</div>
                 <div class="box2">2</div>
             </div>
-
+            <div class="box">
+                
+            </div>
         </el-main>
     </el-container>
 </template>
@@ -67,34 +69,39 @@
 
 .container {
     border: 1px solid rgb(0, 255, 0);
-    height: calc(100% - 90px);
+    height: 100%;
+    width: 100%;
 }
 .header {
     border: 1px solid rgb(255, 0, 0)
 }
 
 .main {
-    padding: 10px;
-    margin: 10px;
+    padding: 0px;
+    margin: 0px;
     border: 1px solid rgb(0, 0, 255);
 }
 .box {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     height: 50%;
+    border: 1px solid rgb(255, 0, 0);
 }
 
 .box1 {
-    width: 45%;
+    width: 48%;
     height: 95%;
     border: 1px solid rgb(255, 0, 255);
     overflow: scroll;
+    margin-right: 10px;
+    margin-top: 8px;
 }
 .box2 {
-    width: 45%;
+    width: 48%;
     height: 95%;
     margin-left: 10px;
     border: 1px solid rgb(255, 0, 255);
+    margin-top: 8px;
 }
 
 .data {
