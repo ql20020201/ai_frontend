@@ -1,16 +1,16 @@
 <template>
   <div class="container">
-  <div class="flex-row logo"></div>
-  <div class="flex-row name">
-    <h3>{{ this.$route.name }}</h3>
+    <div class="flex-row l"></div>
+    <div class="flex-row name">
+      <span>{{ this.$route.name }}</span>
+    </div>
+    <div class="flex-row history">
+      <i class="el-icon-time"></i>
+    </div>
+    <div class="flex-row account">
+      <i class="el-icon-s-custom"></i>
+    </div>
   </div>
-  <div class="flex-row history">
-    <i calss="el-icon-time"></i>
-  </div>
-  <div class="flex-row account">
-    <i class="el-icon-s-custom"></i>
-  </div>
-</div>
 
 </template>
 
@@ -22,7 +22,7 @@ export default {
 
 <style scoped>
 .container {
-  width: 1280px; /* 总长 */
+  width: 100%; /* 总长 */
   height: 100%; /* 根据内容自动调整高度 */
   display: flex; /* 使用 Flexbox 布局 */
   position: relative; /* 为了绝对定位子元素 */
@@ -30,11 +30,11 @@ export default {
 }
 
 .flex-row {
-  position: absolute; /* 使用绝对定位来控制位置 */
+  position: absolute;  /*使用绝对定位来控制位置 */
   bottom: 5%; /* 距离底部 5% */
 }
 
-.logo {
+.l {
   width: 15%; /* 宽度占总长的 15% */
   height: 90%; /* 高度 */
   background-color: lightblue; /* 背景颜色 */
@@ -53,6 +53,9 @@ export default {
   height: 85%; /* 高度 */
   background-color: lightcoral; /* 背景颜色 */
   right: 14%; /* 第一个和第二个的宽度加上间隙 */
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
 }
 
 .account {

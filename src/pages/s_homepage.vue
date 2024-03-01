@@ -43,7 +43,7 @@
   
   .sidebar {
     background-color: rgb(238, 241, 246);
-    width: 200px;
+    width: 200px!important;
   }
 
   .header {
@@ -61,7 +61,7 @@
   
   /* Specific height for each section */
   .hot {
-    height: 150px; /* Example height */
+    height: 300px; /* Example height */
   }
   
   .new {
