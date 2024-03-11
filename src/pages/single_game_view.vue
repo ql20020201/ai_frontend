@@ -1,24 +1,19 @@
 <template>
      <el-container class="container">
          <el-header class="header">
-
-             <div class="Box">
-                <div class="Box1">1</div>
-                <div class="Box2">2</div>
-             </div>
-
+          <h3>c_name</h3>
          </el-header>
 
          <div class="main">
              <div class="box left">
-             <div class="sub-box top">Left Top Box (75%)</div>
-             <div class="sub-box bottom">Left Bottom Box (25%)</div>
-         </div>
+               <div class="sub-box top">Left Top Box (75%)</div>
+               <div class="sub-box bottom">Left Bottom Box (25%)</div>
+             </div>
              <div class="box right">
-             <div class="sub-box top">Right Top Box (45%)</div>
-             <div class="sub-box bottom">Right Bottom Box (40%)</div>
-         </div>
-</div>
+              <div class="sub-box top">Right Top Box (45%)</div>
+              <div class="sub-box bottom">Right Bottom Box (40%)</div>
+             </div>
+        </div>
 
      </el-container>
 </template>

@@ -93,6 +93,14 @@ const router =  new Router({
         title: 'teacher_homepage',
       }
     },
+    {
+      path:'/try',
+      name:'try',
+      component: t_homepage => require(['@/pages/try.vue'], t_homepage),
+      meta:{
+        title: 'try',
+      }
+    },
 		{
 			path: '*',
 			redirect:'/index',

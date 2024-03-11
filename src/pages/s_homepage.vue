@@ -369,7 +369,11 @@
     margin-top: 2%;
   }
   .leader{                      /*表格 */
-    
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 16px;
+    font-weight: 600;
+    font-style: italic;
+    margin-left: 0px auto;
   }
   .competitions {               /*边框*/
     height: 62%; 
@@ -380,6 +384,7 @@
     border: 2px solid #2e2e2ef6;
     border-radius: 10px;
     margin-top: 2%;
+    margin-bottom: 1%;
   }
   .all-race{                    /*表格 */
     color: rgba(0, 0, 0, 0.5);
