@@ -104,7 +104,14 @@ const router =  new Router({
 		{
 			path: '*',
 			redirect:'/index',
-		},
+		},{
+      path:'/t_create_game',
+      name:'create_game',
+      component: t_create_game => require(['@/pages/t_create_game.vue'], t_create_game),
+      meta:{
+        title: 'create_game',
+      }
+    },
   ],
 });
 
