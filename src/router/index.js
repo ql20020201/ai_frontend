@@ -111,6 +111,13 @@ const router =  new Router({
       meta:{
         title: 'create_game',
       }
+    },{
+      path:'/t_manage_game',
+      name:'manage_game',
+      component: t_manage_game => require(['@/pages/t_manage_game.vue'], t_manage_game),
+      meta:{
+        title: 'manage_game',
+      }
     },
   ],
 });
