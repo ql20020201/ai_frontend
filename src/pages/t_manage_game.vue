@@ -72,11 +72,12 @@
                 <el-table-column
                     prop="name"
                     label="name"
-                    style="width: 5%;">
+                    style="width: 5%;"
+                    >
                 </el-table-column>
                 <el-table-column
                     prop="date"
-                    label="日期"
+                    label="date"
                     sortable
                     style="width: 10%;"
                     column-key="date"
@@ -94,7 +95,21 @@
                     :filter-method="filterScore"
                 >
                 </el-table-column>
-
+                <el-table-column
+                    align="right">
+                        <template slot="header" slot-scope="scope">
+                            <el-input
+                                v-model="search"
+                                size="large"
+                                placeholder="Search"/>
+                        </template>
+                        <template slot-scope="scope">
+                            <el-button
+                                size="lage"
+                                type="primary"
+                                @click="handleEdit(scope.$index, scope.row)">Download all</el-button>
+                        </template>
+                </el-table-column>
             </el-table>
         </div>
     </el-main>
@@ -116,24 +131,20 @@ export default {
         },
         tableData: [{
           date: '2016-05-02',
-          name: '王小虎',
+          name: 'neale',
           score: '88',
-          tag: '家'
         },{
           date: '2016-05-04',
-          name: '王小虎',
+          name: 'neal',
           score: '68',
-          tag: '家'
         },{
           date: '2016-05-03',
-          name: '王小虎',
+          name: 'niel',
           score: '58',
-          tag: '家'
         },{
           date: '2016-05-01',
-          name: '王小虎',
+          name: 'nio',
           score: '48',
-          tag: '家'
         },]
       }
     },
@@ -162,16 +173,37 @@ export default {
   }
 </script>
 
-<style scoped>
+<style>
 .main{
     height: 100%;
+    font-family:monospace;
 }
 .box1{
     border: 1px solid #2e2e2ef6;
     height: 80%;
+    font-family:monospace;
 }
 .box2{
     margin-top: 1%;
     border: 1px solid #2e2e2ef6;
+    font-family:monospace;
+}
+.el-form,
+.el-input,
+.el-select,
+.el-date-picker,
+.el-time-picker,
+.el-upload,
+.el-checkbox-group,
+.el-radio-group,
+.el-button,
+.el-table,
+.el-input__inner, 
+.el-select-dropdown__item, 
+.el-checkbox__label, 
+.el-radio__label 
+{
+  font-family:monospace;
+  font-size: 14px;
 }
 </style>
