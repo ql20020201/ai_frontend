@@ -67,7 +67,7 @@
         <div class="box2">
             <el-table
                 ref="filterTable"
-                :data="tableData"
+                :data="tableData.filter(data => !search || data.name.toLowerCase().includes(search.toLowerCase()))"
                 style="width: 100%">
                 <el-table-column
                     prop="name"
@@ -145,7 +145,8 @@ export default {
           date: '2016-05-01',
           name: 'nio',
           score: '48',
-        },]
+        },],
+        search: ''
       }
     },
     methods: {
