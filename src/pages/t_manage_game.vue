@@ -2,7 +2,7 @@
     <el-main class="main">
         <div class="box1">
             <el-form ref="form" :model="form" label-width="6%" style="font-size: 16px; 
-                                                              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                                                              font-family:monospace;
                                                               font-weight: 500;
                                                               margin: 1%; ">
                 <el-form-item label="Name" >
@@ -24,7 +24,7 @@
                     <el-col style="width: 20%;">
                         <el-date-picker type="date" placeholder="Start" v-model="form.date1" style="width: 100%;"></el-date-picker>
                     </el-col>
-                    <el-col class="line" style="width: 2%;">----</el-col>
+                    <el-col class="line" style="width: 2%;">---</el-col>
                     <el-col style="width: 20%;">
                         <el-date-picker type="date" placeholder="End" v-model="form.date2" style="width: 100%;"></el-date-picker>
                     </el-col>
@@ -147,7 +147,7 @@ export default {
           score: '48',
         },],
         search: ''
-      }
+       }
     },
     methods: {
       onSubmit() {
